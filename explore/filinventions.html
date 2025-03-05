@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+	<link rel="icon" type="image/png" href="../assets/images/icon.png">
+    <title>About Vesperium</title>
+    <link rel="stylesheet" href="../css/header.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            fetch("header.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("header-container").innerHTML = data;
+                })
+                .catch(error => console.error("Error loading header:", error));
+        });
+    </script>
+    <style>
+        body {
+        background: url('../assets/images/headerbg.png');
+        background-repeat: repeat;
+        background-size: auto;
+        color: #333;
+        line-height: 1.6;
+        padding: 90px 10% 0;
+        }
+
+        /* Content Container */
+        #center-container {
+            width: 80%;
+            max-width: 2000px;
+            margin: 0 auto;
+            background: #f5f5dc;
+            padding: 50px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h4, h5 {
+        margin: 10px 0;
+         }
+        #page-head{
+            font-size: 48px;
+        }
+        .text-content{
+            font-size: 20px;
+        }
+        .text-content p{
+            margin-bottom: 15px;
+        }
+        .image-left {
+            float: left;
+            margin-right: 15px;
+        }
+
+        .image-right {
+            float: right;
+            margin-left: 15px;
+        }
+
+        .image-left img, .image-right img {
+            max-width: 300px;
+            max-height: 300px;
+        }
+        .caption {
+            font-size: 14px;
+            color: #666;
+            margin-top: 5px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+
+
+
+<body>
+    <div id="header-container">
+        <div id="center-container">
+            <h1 class="page-head">Filipino First Inventions Collection</h1>
+            <div class="text-content">
+                <div class="image-right">
+                    <img src="../assets/images/bananaketchup.jpg" alt="Banana Ketchup">
+                    <p class="caption">Banana Ketchup
+                    </p>
+                </div>
+                <p>The <strong>Filipino First Inventions Collection</strong> celebrates the innovative spirit of Filipinos by showcasing groundbreaking creations that have left a lasting impact. Among the most famous is <strong>Banana Ketchup</strong>, an invention by food scientist María Orosa during World War II. Due to tomato shortages, Orosa developed a sweet, tangy, and vibrant red sauce made from bananas, which quickly became a staple in Filipino cuisine. Today, it remains a symbol of Filipino ingenuity, widely used in households across the country.</p>
+
+            <div class="image-left">
+                <img src="../assets/images/yoyo.jpg" alt="Yoyo">
+                <p class="caption">Yoyo</p>
+            </div>
+            <p>Another highlight of the collection is the <strong>Yoyo</strong>, originally used as a hunting weapon in pre-colonial times before evolving into a popular toy. The <strong>Erythromycin antibiotic</strong>, discovered by Dr. Abelardo Aguilar, revolutionized medicine worldwide by offering a powerful alternative to penicillin. The <strong>Motolite battery</strong>, pioneered by Filipino scientists, has also made significant contributions to automotive technology, demonstrating the country's impact on industrial innovation.</p>
+
+
+
+            <p>From practical tools to revolutionary discoveries, this collection showcases the creativity and problem-solving abilities of Filipinos throughout history. These inventions are not just products—they are testaments to the resilience and brilliance of the Filipino mind. By displaying these groundbreaking achievements, the Vesperium honors the legacy of Filipino inventors who have shaped both local and global industries.</p>
+
+
+
+
+
+
+            
+            
+            </div>
+        </div>
+    </div>
+</body>
+<!-- scrolling javascript -->
+<script>
+    window.addEventListener('scroll', function() {
+        const header = document.querySelector('header');
+        const tickets = document.querySelector('.tickets');
+        const scrollPosition = window.scrollY;
+
+        if (scrollPosition > 200) {
+            header.classList.add('scrolled');
+            tickets.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+            tickets.classList.remove('scrolled');
+        }
+    });
+</script>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <link rel="icon" type="image/png" href="../assets/images/icon.png">
+    <title>Vesperium</title>
+    <link rel="stylesheet" href="../css/header.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            fetch("header.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("header-container").innerHTML = data;
+                })
+                .catch(error => console.error("Error loading header:", error));
+        });
+    </script>
+    <style>
+        body {
+            background: url('../assets/images/headerbg.png');
+            background-repeat: repeat;
+            background-size: auto;
+            color: #333;
+            line-height: 1.6;
+            padding: 90px 10% 0;
+        }
+
+        /* Content Container */
+        #center-container {
+            width: 80%;
+            max-width: 2000px;
+            margin: 0 auto;
+            background: #f5f5dc;
+            padding: 50px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1, h2, h4, h5 {
+            margin: 10px 0;
+        }
+
+        .page-head {
+            font-size: 48px;
+        }
+
+        .text-content {
+            font-size: 20px;
+        }
+
+        .text-content p {
+            margin-bottom: 15px;
+        }
+
+        /* Product Container */
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        /* Product Card */
+        .product-card {
+            background: #fff;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+            font-family: Arial, sans-serif;
+            width: 250px;
+            height: 400px;
+        }
+
+        .product-card:hover {
+            transform: scale(1.05);
+        }
+
+        .product-card img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .card-link {
+            text-decoration: none;
+            color: inherit;
+            font-size: 25px;
+        }
+
+        /* Arrow Styling */
+        .arrow {
+            width: 35px;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #ddd;
+            border-radius: 50%;
+            transition: background 0.3s;
+            margin: 10px auto;
+        }
+
+        .arrow:hover {
+            background: #e0e0e0;
+        }
+
+        .arrow::after {
+            content: "→";
+            font-size: 15px;
+            color: #333;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="center-container">
+        <h1 class="page-head">Collections</h1>
+        <div class="product-container">
+            <a href="filwear.html" class="card-link">
+                <div class="product-card">
+                    <img src="../assets/images/barongtagalog.jpg" alt="barongtagalog">
+                    <div class="card-text">Filipino Traditional Wear</div>
+                    <div class="arrow"></div>
+                </div>
+            </a>
+            <a href="filtools.html" class="card-link">
+                <div class="product-card">
+                    <img src="../assets/images/duyongshelladze.jpg" alt="duyongshelladze">
+                    <div class="card-text">Filipino Ancient Tools</div>
+                    <div class="arrow"></div>
+                </div>
+            <a href="filweapons.html" class="card-link">
+                <div class="product-card">
+                    <img src="../assets/images/bolo.JPG" alt="bolo">
+                    <div class="card-text">Filipino Ancient Weapons</div>
+                    <div class="arrow"></div>
+                </div>
+            </a>
+            <a href="filinventions.html" class="card-link">
+                <div class="product-card">
+                    <img src="../assets/images/bananaketchup.jpg" alt="bananaketchup">
+                    <div class="card-text">Filipino First Inventions</div>
+                    <div class="arrow"></div>
+                </div>
+            </a>
+        </div>
+    </div>
+    
+</body>
+<!-- scrolling javascript -->
+<script>
+    window.addEventListener('scroll', function() {
+        const header = document.querySelector('header');
+        const tickets = document.querySelector('.tickets');
+        const scrollPosition = window.scrollY;
+
+        if (scrollPosition > 200) {
+            header.classList.add('scrolled');
+            tickets.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+            tickets.classList.remove('scrolled');
+        }
+    });
+</script>
+</html>

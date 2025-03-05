@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+	<link rel="icon" type="image/png" href="../assets/images/icon.png">
+    <title>About Vesperium</title>
+    <link rel="stylesheet" href="../css/header.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            fetch("header.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("header-container").innerHTML = data;
+                })
+                .catch(error => console.error("Error loading header:", error));
+        });
+    </script>
+    <style>
+        body {
+        background: url('../assets/images/headerbg.png');
+        background-repeat: repeat;
+        background-size: auto;
+        color: #333;
+        line-height: 1.6;
+        padding: 90px 10% 0;
+        }
+
+        /* Content Container */
+        #center-container {
+            width: 80%;
+            max-width: 2000px;
+            margin: 0 auto;
+            background: #f5f5dc;
+            padding: 50px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h4, h5 {
+        margin: 10px 0;
+         }
+        #page-head{
+            font-size: 48px;
+        }
+        .text-content{
+            font-size: 20px;
+        }
+        .text-content p{
+            margin-bottom: 15px;
+        }
+        .image-left {
+            float: left;
+            margin-right: 15px;
+        }
+
+        .image-right {
+            float: right;
+            margin-left: 15px;
+        }
+
+        .image-left img, .image-right img {
+            max-width: 300px;
+            max-height: 300px;
+        }
+        .caption {
+            font-size: 14px;
+            color: #666;
+            margin-top: 5px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+
+
+
+<body>
+    <div id="header-container">
+        <div id="center-container">
+            <h1 class="page-head">Filipino Ancient Tools Collection</h1>
+            <div class="text-content">
+                <div class="image-right">
+                    <img src="../assets/images/duyongshelladze.jpg" alt="Duyong Shell Adze">
+                    <p class="caption">Duyong Shell Adze</p>
+                </div>
+                
+                
+                <p>The <strong>Filipino Ancient Tools Collection</strong> at the Vesperium offers a glimpse into the ingenuity of early Filipino societies, showcasing the tools that shaped daily life, craftsmanship, and survival. Among the most significant artifacts is the <strong>Duyong Shell Adze</strong>, a tool made from giant clam shells, discovered in Palawan and dating back thousands of years. This early example of tool-making demonstrates the resourcefulness of pre-colonial Filipinos, who transformed natural materials into essential instruments for carving wood, building boats, and shaping homes.</p>
+                
+                <p>Beyond the adze, the collection features a variety of agricultural and crafting tools, including the <strong>sangkalan</strong>, an ancient wooden chopping block, and the <strong>ganta</strong>, a traditional measurement tool used for weighing rice and grains. Fishermen’s gear such as the <strong>salakab</strong>, a cone-shaped bamboo fish trap, and the <strong>bubu</strong>, a woven fish basket, highlight the deep connection between Filipinos and their surrounding waters. Blacksmithing tools, used to forge weapons and farming implements, also provide insight into the development of metallurgy in the archipelago.</p>
+                <div class="image-left">
+                    <img src="../assets/images/sangkalan.jpg" alt="sangkalan">
+                    <p class="caption">Sangkalan</p>
+                </div>
+                <p>These artifacts stand as a testament to the resourcefulness and craftsmanship of early Filipinos. By adapting to their environment and utilizing available materials, they created tools that supported not only daily survival but also the flourishing of vibrant communities. The Vesperium’s collection brings these innovations to light, honoring the skilled hands that shaped the foundation of Filipino society.</p>
+            </div>
+        </div>
+    </div>
+</body>
+<!-- scrolling javascript -->
+<script>
+    window.addEventListener('scroll', function() {
+        const header = document.querySelector('header');
+        const tickets = document.querySelector('.tickets');
+        const scrollPosition = window.scrollY;
+
+        if (scrollPosition > 200) {
+            header.classList.add('scrolled');
+            tickets.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+            tickets.classList.remove('scrolled');
+        }
+    });
+</script>
+</html>
